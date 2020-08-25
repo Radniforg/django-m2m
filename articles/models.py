@@ -41,5 +41,8 @@ class Variant(models.Model):
         on_delete=models.CASCADE,
     )
 
+    main = models.BooleanField(verbose_name='Основной',
+                               default=False)
+
     class Meta:
         unique_together = ('theme', 'article')
