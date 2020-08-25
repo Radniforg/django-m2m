@@ -33,6 +33,7 @@ class Variant(models.Model):
 
     theme = models.ForeignKey(
         Theme,
+        verbose_name='Тематический раздел',
         on_delete=models.CASCADE,
     )
 
