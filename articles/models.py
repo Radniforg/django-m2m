@@ -10,11 +10,14 @@ class Article(models.Model):
     theme = models.ManyToManyField(
         'Theme',
         through='Variant',
+        related_name='scopes'
     )
+    objects = models.Manager()
 
     class Meta:
         verbose_name = 'Статья'
         verbose_name_plural = 'Статьи'
+
 
     def __str__(self):
         return self.title
